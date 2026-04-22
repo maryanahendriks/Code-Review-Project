@@ -2,7 +2,7 @@
 
 # 🌸 PinkCode — Visualizador de Código
 
-![PinkCode Preview](images/preview.png)
+![PinkCode Preview](./images/preview.png)
 
 ## Sobre o projeto
 
