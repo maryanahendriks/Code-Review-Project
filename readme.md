@@ -4,6 +4,14 @@
 
 ![PinkCode Preview](./images/preview.png)
 
+
+---
+
+![PinkCode Preview](./images/preview2.png)
+
+
+
+
 ## Sobre o projeto
 
 O **PinkCode** é um visualizador de código com destaque de sintaxe (syntax highlighting) desenvolvido do zero com HTML, CSS e JavaScript puro. Este projeto foi criado com foco em aprendizado, explorando conceitos fundamentais do desenvolvimento web front-end sem o uso de frameworks.
