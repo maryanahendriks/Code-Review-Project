@@ -1,0 +1,235 @@
+/* ── FONTES ── */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap');
+
+/* ── PARTÍCULAS ── */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ── BASE ── */
+body {
+  margin: 0;
+  padding: 20px;
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  background-image: radial-gradient(ellipse at top, #0a0a2e 0%, #000000 60%);
+}
+
+/* ── CABEÇALHO ── */
+header {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ff69b422;
+  padding-bottom: 16px;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff69b4;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  animation: brilho 2s ease-in-out infinite;
+}
+
+@keyframes brilho {
+  0%   { text-shadow: 0 0 10px rgba(255, 105, 180, 0.4); }
+  50%  { text-shadow: 0 0 30px rgba(255, 105, 180, 0.9), 0 0 60px rgba(255, 105, 180, 0.4); }
+  100% { text-shadow: 0 0 10px rgba(255, 105, 180, 0.4); }
+}
+
+/* ── TOOLBAR ── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+select {
+  background: #050510;
+  color: #ff69b4;
+  border: 1px solid #ff69b444;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+select:hover { border-color: #ff69b4; }
+
+button {
+  background: #050510;
+  color: #ff69b4;
+  border: 1px solid #ff69b444;
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: #ff69b4;
+  color: #000000;
+  border-color: #ff69b4;
+}
+
+/* ── ESTATÍSTICAS ── */
+.stats {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #ff69b466;
+  margin-bottom: 12px;
+}
+
+/* ── PAINÉIS ── */
+.paineis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.painel {
+  background: #05050f;
+  border: 1px solid #ff69b422;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.painel h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  color: #ff69b488;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+/* ── EDITOR ── */
+#editor {
+  width: 100%;
+  height: 340px;
+  background: #000000;
+  color: #ffb6d9;
+  border: none;
+  padding: 12px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  line-height: 1.75;
+  resize: none;
+  box-sizing: border-box;
+  outline: none;
+  caret-color: #ff69b4;
+}
+
+/* ── OUTPUT / PREVIEW ── */
+.output-wrap {
+  display: flex;
+  overflow: auto;
+  height: 340px;
+}
+
+.output-wrap pre {
+  background: #000000 !important;
+  border-radius: 6px;
+  flex: 1;
+  margin: 0;
+}
+
+pre { margin: 0; }
+code { background: transparent !important; }
+
+/* ── HIGHLIGHT.JS ── */
+.hljs                { background: transparent !important; color: #ffb6d9; }
+.hljs-keyword        { color: #ff79c6 !important; }
+.hljs-string         { color: #f1fa8c !important; }
+.hljs-number         { color: #bd93f9 !important; }
+.hljs-comment        { color: #6272a4 !important; font-style: italic; }
+.hljs-function       { color: #50fa7b !important; }
+.hljs-title          { color: #50fa7b !important; }
+.hljs-built_in       { color: #ffb86c !important; }
+.hljs-literal        { color: #bd93f9 !important; }
+.hljs-attr           { color: #50fa7b !important; }
+.hljs-tag            { color: #ff5555 !important; }
+
+/* ── NÚMEROS DE LINHA ── */
+#num-linhas-output,
+#num-linhas-editor {
+  padding: 12px 10px 0 4px;
+  border-right: 1px solid #ff69b422;
+  margin-right: 12px;
+  color: #ff69b444;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  line-height: 1.75;
+  text-align: right;
+  user-select: none;
+  min-width: 32px;
+}
+
+/* ── FOOTER ── */
+footer {
+  margin-top: 30px;
+  padding-top: 16px;
+  border-top: 1px solid #ff69b422;
+  text-align: center;
+  font-size: 12px;
+  color: #ff69b466;
+}
+
+footer a       { color: #ff69b4; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* TEMA CLARO  */
+
+body.tema-claro {
+  background: #fff0f7;
+  color: #1a001a;
+  background-image: radial-gradient(ellipse at top, #ffe0f0 0%, #fff0f7 60%);
+}
+
+body.tema-claro header              { border-color: #cc006622; }
+body.tema-claro header h1           { color: #cc0066; text-shadow: 0 0 20px rgba(204,0,102,0.2); }
+
+body.tema-claro .painel             { background: #ffffff; border-color: #cc006622; }
+body.tema-claro .painel h2          { color: #cc006688; }
+
+body.tema-claro select              { background: #ffffff; color: #cc0066; border-color: #cc006644; }
+
+body.tema-claro button              { background: #ffffff; color: #cc0066; border-color: #cc006644; }
+body.tema-claro button:hover        { background: #cc0066; color: #ffffff; }
+
+body.tema-claro #editor             { background: #fff8fb; color: #ffb6d9; caret-color: #cc0066; }
+body.tema-claro .output-wrap pre    { background: #fff8fb !important; }
+
+body.tema-claro .hljs               { color: #ffb6d9 !important; background: transparent !important; }
+body.tema-claro .hljs-keyword       { color: #cc0066 !important; }
+body.tema-claro .hljs-string        { color: #006600 !important; }
+body.tema-claro .hljs-number        { color: #7700cc !important; }
+body.tema-claro .hljs-comment       { color: #999999 !important; }
+body.tema-claro .hljs-function      { color: #0055cc !important; }
+body.tema-claro .hljs-title         { color: #0055cc !important; }
+body.tema-claro .hljs-built_in      { color: #cc6600 !important; }
+body.tema-claro .hljs-literal       { color: #7700cc !important; }
+body.tema-claro .hljs-attr          { color: #0055cc !important; }
+body.tema-claro .hljs-tag           { color: #cc0000 !important; }
+
+body.tema-claro #num-linhas-output,
+body.tema-claro #num-linhas-editor  { border-color: #cc006622; color: #cc006644; }
+
+body.tema-claro .stats              { color: #cc006666; }
+
+body.tema-claro footer              { border-color: #cc006622; color: #cc006666; }
+body.tema-claro footer a            { color: #cc0066; }

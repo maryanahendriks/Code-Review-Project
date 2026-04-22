@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>PinkCode</title>
+
+  <!-- Highlight.js: tema de cores -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+
+  <!-- Estilos da aplicação -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Fundo animado com partículas -->
+  <div id="particles"></div>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>PinkCode</h1>
+  </header>
+
+  <!-- Barra de ferramentas -->
+  <div class="toolbar">
+    <label for="lang">Linguagem:</label>
+    <select id="lang">
+      <option value="javascript">JavaScript</option>
+      <option value="python">Python</option>
+      <option value="csharp">C#</option>
+      <option value="java">Java</option>
+      <option value="cpp">C++</option>
+    </select>
+    <button id="btn-copiar">Copiar</button>
+    <button id="btn-guardar">Guardar</button>
+    <button id="btn-limpar">Limpar</button>
+    <button id="btn-tema">Tema claro</button>
+  </div>
+
+  <!-- Estatísticas -->
+  <div class="stats">
+    <span id="num-linhas">0 linhas</span>
+    <span>·</span>
+    <span id="num-chars">0 caracteres</span>
+  </div>
+
+  <!-- Painéis principais -->
+  <main>
+    <div class="paineis">
+
+      <!-- Editor de código -->
+      <div class="painel">
+        <h2>Code</h2>
+        <div class="output-wrap">
+          <div id="num-linhas-editor"></div>
+          <textarea id="editor" placeholder="Escreve o teu código aqui..."></textarea>
+        </div>
+      </div>
+
+      <!-- Preview com highlight -->
+      <div class="painel">
+        <h2>Preview</h2>
+        <div class="output-wrap">
+          <div id="num-linhas-output"></div>
+          <pre><code class="hljs" id="output"></code></pre>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Feito por <a href="https://github.com/maryanahendriks" target="_blank">Maryana Hendriks</a></p>
+  </footer>
+
+  <!-- Highlight.js: biblioteca principal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- Highlight.js: linguagens extra -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/csharp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+
+  <!-- Partículas animadas -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Lógica da aplicação -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
+
+
+
