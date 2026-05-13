@@ -1,4 +1,4 @@
-/* PinkCode — app.js, Lógica principal da aplicação  */
+
 
 /* ── ELEMENTOS DO DOM ── */
 const editor          = document.getElementById('editor');
@@ -13,9 +13,7 @@ const btnTema         = document.getElementById('btn-tema');
 const btnLimpar       = document.getElementById('btn-limpar');
 const btnGuardar      = document.getElementById('btn-guardar');
 
-/* ── ESTATÍSTICAS ──
-   Atualiza o contador de linhas e caracteres em tempo real
-   ── */
+
 function atualizarStats() {
   const codigo = editor.value;
   const linhas = codigo === '' ? 0 : codigo.split('\n').length;
@@ -24,7 +22,7 @@ function atualizarStats() {
   numChars.textContent  = chars + ' caracteres';
 }
 
-/* ── NÚMEROS DE LINHA ── */
+
 
 function atualizarNumLinhas(codigo) {
   const linhas = codigo === '' ? 0 : codigo.split('\n').length;
@@ -46,7 +44,7 @@ function destacar() {
   atualizarNumLinhas(codigo);
 }
 
-/* ── EVENTOS ── */
+
 
 
 editor.addEventListener('input', destacar);
